@@ -37,9 +37,9 @@ long_data$maize_yield <- as.numeric(long_data$maize_yield) # convert column maiz
 
 # 2. 
 
-maize_means <- long_data %>%
+maize_means <- long_data %>%  # Calculate the mean values for pre-treated group, pre-untreated group, post-treated group, post-untreated group
   group_by(post, treatment) %>%
-  summarise(mean_yield = mean(maize_yield, na.rm = TRUE))
+  summarise(mean_yield = mean(maize_yield, na.rm = TRUE)) 
 
 mean_yield_treatment_post <- 698.7860 # define 
 mean_yield_treatment_pre <- 613.4167 # define
